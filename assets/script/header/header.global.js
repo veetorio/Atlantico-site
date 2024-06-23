@@ -10,7 +10,7 @@ for (const iterator of header) {
         if(e.target.textContent === "home"){
             location.href = origin +  "/index.html"
         }else{
-            location.href = origin + "/assets/pages/" + e.target.textContent + ".html"
+            location.href = origin + "/Atlantico-site/assets/pages/" + e.target.textContent + ".html"
         }
     })
 }
