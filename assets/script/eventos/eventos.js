@@ -27,6 +27,13 @@ const banner = document.getElementById("banner")
 const table = document.getElementById("table")
 const Newdata = document.getElementById("date")
 
+banner.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+    url("../../../public/img/base-image.jpeg") no-repeat`
+banner.style.backgroundSize = "cover"
+banner.style.backgroundPosition = "50% 20%"
+
+
+
 
 
 
