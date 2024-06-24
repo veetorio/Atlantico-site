@@ -204,7 +204,7 @@ function modal(desc,title,new_data){
 
 function passPage(){
     const origin = location.origin
-    location.href = origin +  "Atlantico-site/assets/pages/" + "noticias.html"
+    location.href = origin +  "/Atlantico-site/assets/pages/" + "noticias.html"
 }
 render()
 renderBanner()
