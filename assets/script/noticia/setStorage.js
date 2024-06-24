@@ -22,7 +22,8 @@ function renderMain(){
            
             setBases(JSON.stringify(obj))
             const origin = location.origin
-            location.href = origin + "/assets/pages/noticiaModal.html"
+            console.log(location.host)
+            location.href = origin + "/Atlantico-site/assets/pages/noticiaModal.html"
         })
         
     }
