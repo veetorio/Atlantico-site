@@ -37,6 +37,10 @@ figure::after{
     box-shadow: 2px 2px 4px black;
     padding: 2%;
 }
+.content-card > p{
+    height: 20%;
+    overflow: hidden;
+}
 .content-card > .img{
     width: 100%;
     height: 100%;

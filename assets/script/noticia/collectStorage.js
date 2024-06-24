@@ -1,3 +1,4 @@
+const btnBack = document.getElementById("back")
 function renderNoticy() {
     const element = JSON.parse(localStorage.getItem("card"))
     const img = document.getElementById("figure")
@@ -21,11 +22,20 @@ function renderNoticy() {
     }
     h1.textContent = element.h1;
     p.textContent = element.p;
-    img.style.background = `url(${element.img})`
+    img.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+    url(${element.img})`
     img.style.backgroundSize = `cover`
+    img.style.backgroundPosition = `50% 50%`
 
     localStorage.clear()
 
+}
+
+btnBack.addEventListener("click",returnPage)
+function returnPage(){
+    const origin = location.origin 
+    const path = "/assets/pages/noticias.html"
+    location.href = origin + path
 }
 
 renderNoticy()
