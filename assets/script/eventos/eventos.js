@@ -16,20 +16,29 @@ class Ev {
     }
 
 }
-class img {
+class Img {
     path;
     desc;
-    constructor(){
+    constructor(path,desc){
+        this.path = path;
+        this.desc = desc;
+    }
+}
+class Banner{
+    path;
+    title;
+    desc;
+    constructor(path,title,desc){
+        this.path = path;
+        this.desc = desc;
+        this.title = title;
 
     }
 }
 const banner = document.getElementById("banner")
 const table = document.getElementById("table")
 const Newdata = document.getElementById("date")
-
-
-
-
+const data = new Date()
 const events = [
     new Ev("vee",22, 1, "teste 1", "teste 1"),
     new Ev("titulo",22, 1, "teste 1", "teste 1"),
@@ -48,7 +57,6 @@ const days = [
     "sabado",
     "domingo"
 ]
-
 const mesesDoAno = [
     "Janeiro",
     "Fevereiro",
@@ -62,11 +70,51 @@ const mesesDoAno = [
     "Outubro",
     "Novembro",
     "Dezembro"
-  ];
+];
+const images = [
+    new Img("img.jpeg","M11 3 X 1 ATLÂNTICO"),
+    new Img("img2.jpeg","Estreia da Sociedade Esportiva Atlântico, sub15 e sub17, na III Copa Interbairro de Futebol de Base.")
+]
 
 
 
-const data = new Date()
+
+
+
+
+
+function renderBanner(){
+    const newBanner = new Banner("../../../public/img/banner.jpeg","Momento importante para a vida dessas crianças e adolescentes do projeto ATLÂNTICO.","Foi uma honra receber em nosso CT o campeão da Champions League SALOMON CALU, pelo Chelsea.Momento importante para a vida dessas crianças e adolescentes do projeto ATLÂNTICO.");
+    const collection = banner.children
+    banner
+        .style
+        .background = `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url("${newBanner.path}") no-repeat`;
+    banner
+        .style
+        .backgroundSize = "cover"
+    banner
+        .style
+        .backgroundPosition = "50% 20%"
+    collection[0]
+        .textContent = newBanner.title
+    collection[1]
+        .textContent = newBanner.desc
+    
+}
+
+function renderCartaz(){
+    const cartazes = document.getElementsByClassName("noticy")
+    const path = "../../../public/img/cartazes/"
+    for (let i = 0;i < cartazes.length;i++) {
+        cartazes[i].style.background =`url(${path + images[i].path})`;
+        cartazes[i].style.backgroundSize = "cover";
+        cartazes[i].dataset.desc = images[i].desc
+        cartazes[i].addEventListener("click",passPage)
+    }
+    
+}
+
+
 function render() {
     const ano = data.getFullYear()
     const mes = data.getMonth() + 1
@@ -118,5 +166,11 @@ function modal(desc,title,new_data){
         modalHtml.style.display = "none"
     })
 }
+
+function passPage(){
+    const origin = location.origin
+    location.href = origin + "/assets/pages/" + "noticias.html"
+}
 render()
-const day = events[0].calcDayPosition()
+renderBanner()
+renderCartaz()
