@@ -77,13 +77,6 @@ const images = [
 ]
 
 
-  const images = [
-    new Img("img.jpeg","M11 3 X 1 ATLÂNTICO"),
-    new Img("img2.jpeg","Estreia da Sociedade Esportiva Atlântico, sub15 e sub17, na III Copa Interbairro de Futebol de Base.")
-]
-
-
-
 
 
 
