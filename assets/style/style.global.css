@@ -36,12 +36,12 @@
     position: fixed;
     height: 15vh;
     width: 100vw;
-    background: #ffffff19;
+    background: #00000038;
     animation: alternateLayout 1s;
     animation-timeline: scroll();
 }
 #root > header > .content-logo > svg > path {
-    fill: white;
+    fill: #ffffff;
     animation: alternateLayout 1s;
     animation-timeline: scroll();
 }
