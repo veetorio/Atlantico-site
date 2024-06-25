@@ -115,6 +115,9 @@ td {
   background: #FFDC80;
   margin-top: 2%;
   padding: 4%;
+  display: flex;
+  flex-direction: column;
+  gap:10rem;
 }
 
 
@@ -125,12 +128,17 @@ td {
 }
 
 .circle{
-  height: 100px;
-  width:100px;
+  height: 150px;
+  width:150px;
   border-radius: 50%;
-  background: #0062f6;
+  background-image: url(../../../public/img/fundador/fundador.jpg);
+  background-size: cover;
 }
 .content-gen{
+  display: flex;
+  gap: 2%;
+}
+.content-gen > h4{
   display: flex;
   gap: 2%;
 }
