@@ -40,13 +40,13 @@ const table = document.getElementById("table")
 const Newdata = document.getElementById("date")
 const data = new Date()
 const events = [
-    new Ev("vee",22, 1, "teste 1", "teste 1"),
-    new Ev("titulo",22, 1, "teste 1", "teste 1"),
-    new Ev("titulo",22, 1, "teste 1", "teste 1"),
-    new Ev("titulo",22, 1, "teste 1", "teste 1"),
-    new Ev("titulo",22, 1, "teste 1", "teste 1"),
-    new Ev("titulo",22, 1, "teste 1", "teste 1"),
-    new Ev("titulo",22, 1, "teste 1", "teste 1"),
+    new Ev("vee",22, 1, "", ""),
+    new Ev("treino",22, 1, "", ""),
+    new Ev("titulo",22, 1, "", ""),
+    new Ev("titulo",22, 1, "", ""),
+    new Ev("titulo",22, 1, "", ""),
+    new Ev("titulo",22, 1, "", ""),
+    new Ev("titulo",22, 1, "", ""),
 ]
 const days = [
     "segunda",
@@ -166,7 +166,6 @@ function render() {
                                 <div class="pos">
                                     <div class="spinner-grow spinner-grow-sm ${prioridade[e.grau]}" role="status">
                                     </div>
-                                    ${`${data.getDate() + i}/${data.getMonth() + 1}`}
                                 </div>
                             </td>
                             `
