@@ -118,6 +118,79 @@ function renderCartaz(){
 
 
 
+
+
+function renderBanner(){
+    const newBanner = new Banner("../../../public/img/banner.jpeg","Momento importante para a vida dessas crianças e adolescentes do projeto ATLÂNTICO.","Foi uma honra receber em nosso CT o campeão da Champions League SALOMON CALU, pelo Chelsea.Momento importante para a vida dessas crianças e adolescentes do projeto ATLÂNTICO.");
+    const collection = banner.children
+    banner
+        .style
+        .background = `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url("${newBanner.path}") no-repeat`;
+    banner
+        .style
+        .backgroundSize = "cover"
+    banner
+        .style
+        .backgroundPosition = "50% 20%"
+    collection[0]
+        .textContent = newBanner.title
+    collection[1]
+        .textContent = newBanner.desc
+    
+}
+
+function renderCartaz(){
+    const cartazes = document.getElementsByClassName("noticy")
+    const path = "../../../public/img/cartazes/"
+    for (let i = 0;i < cartazes.length;i++) {
+        cartazes[i].style.background =`url(${path + images[i].path})`;
+        cartazes[i].style.backgroundSize = "cover";
+        cartazes[i].dataset.desc = images[i].desc
+        cartazes[i].addEventListener("click",passPage)
+    }
+    
+}
+
+
+
+
+
+function renderBanner(){
+    const newBanner = new Banner("../../../public/img/banner.jpeg","Momento importante para a vida dessas crianças e adolescentes do projeto ATLÂNTICO.","Foi uma honra receber em nosso CT o campeão da Champions League SALOMON CALU, pelo Chelsea.Momento importante para a vida dessas crianças e adolescentes do projeto ATLÂNTICO.");
+    const collection = banner.children
+    banner
+        .style
+        .background = `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url("${newBanner.path}") no-repeat`;
+    banner
+        .style
+        .backgroundSize = "cover"
+    banner
+        .style
+        .backgroundPosition = "50% 20%"
+    collection[0]
+        .textContent = newBanner.title
+    collection[1]
+        .textContent = newBanner.desc
+    
+}
+
+function renderCartaz(){
+    const cartazes = document.getElementsByClassName("noticy")
+    const path = "../../../public/img/cartazes/"
+    for (let i = 0;i < cartazes.length;i++) {
+        cartazes[i].style.background =`url(${path + images[i].path})`;
+        cartazes[i].style.backgroundSize = "cover";
+        cartazes[i].dataset.desc = images[i].desc
+        cartazes[i].addEventListener("click",passPage)
+    }
+    
+}
+
+
+
+
+
+
 function renderBanner(){
     const newBanner = new Banner("../../../public/img/banner.jpeg","Momento importante para a vida dessas crianças e adolescentes do projeto ATLÂNTICO.","Foi uma honra receber em nosso CT o campeão da Champions League SALOMON CALU, pelo Chelsea.Momento importante para a vida dessas crianças e adolescentes do projeto ATLÂNTICO.");
     const collection = banner.children
